@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Palette Generator - Free Tool | DevToolBox</title>
+    <meta name="description"
+        content="Free random color palette generator. Generate beautiful color schemes for your projects.">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧰</text></svg>">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        #palette-container {
+            display: flex;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            margin-bottom: var(--spacing-lg);
+            box-shadow: var(--shadow-md);
+        }
+
+        @media (max-width: 600px) {
+            #palette-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="../index.html" class="logo">🧰 DevToolBox</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#tools">Tools</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+                <li><button id="theme-toggle" class="theme-toggle">🌙</button></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="tool-container section">
+        <div class="tool-header">
+            <h1>Color Palette Generator</h1>
+            <p style="color: var(--text-secondary); font-size: 1.1rem;">Generate random color schemes</p>
+        </div>
+        <div class="tool-interface">
+            <div id="palette-container"></div>
+            <div class="btn-group" style="justify-content: center;">
+                <button id="btn-generate" class="btn btn-primary" style="min-width: 200px;">🎲 New Palette</button>
+            </div>
+        </div>
+        <div class="ad-container ad-content">📢 Google AdSense Ad Space</div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 DevToolBox. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/theme.js"></script>
+    <script src="../js/tools/palette-generator.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Minifier & Beautifier - Free Tool | DevToolBox</title>
+    <meta name="description"
+        content="Free online CSS minifier and beautifier. Minify CSS for production or beautify for development.">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧰</text></svg>">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="../index.html" class="logo">🧰 DevToolBox</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#tools">Tools</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+                <li><button id="theme-toggle" class="theme-toggle">🌙</button></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="tool-container section">
+        <div class="tool-header">
+            <h1>CSS Minifier & Beautifier</h1>
+            <p style="color: var(--text-secondary); font-size: 1.1rem;">Minify CSS for production or beautify for
+                development</p>
+        </div>
+        <div class="tool-interface">
+            <div class="input-group">
+                <label for="css-input">Input CSS:</label>
+                <textarea id="css-input" placeholder="Paste your CSS here..." style="min-height: 250px;"></textarea>
+            </div>
+            <div class="btn-group">
+                <button id="btn-minify" class="btn btn-primary">📦 Minify</button>
+                <button id="btn-beautify" class="btn btn-primary">✨ Beautify</button>
+                <button id="btn-copy" class="btn btn-secondary">📋 Copy</button>
+                <button id="btn-clear" class="btn btn-outline">🗑️ Clear</button>
+            </div>
+            <div id="error-message" class="error-message hidden"></div>
+            <div id="success-message" class="success-message hidden"></div>
+            <div class="input-group mt-3">
+                <label>Output:</label>
+                <pre id="css-output" class="output-area"></pre>
+            </div>
+        </div>
+        <div class="ad-container ad-content">📢 Google AdSense Ad Space</div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 DevToolBox. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/theme.js"></script>
+    <script src="../js/tools/css-minifier.js"></script>
+</body>
+
+</html>

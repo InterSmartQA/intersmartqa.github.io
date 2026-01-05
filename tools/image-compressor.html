@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Compressor - Free Tool | DevToolBox</title>
+    <meta name="description"
+        content="Free online image compressor. Compress PNG and JPG images in your browser locally.">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧰</text></svg>">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="../index.html" class="logo">🧰 DevToolBox</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#tools">Tools</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+                <li><button id="theme-toggle" class="theme-toggle">🌙</button></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="tool-container section">
+        <div class="tool-header">
+            <h1>Image Compressor</h1>
+            <p style="color: var(--text-secondary); font-size: 1.1rem;">Compress images locally in your browser</p>
+        </div>
+        <div class="tool-interface">
+            <div class="card p-4" style="text-align: center; border-style: dashed; border-width: 2px;">
+                <input type="file" id="upload-input" accept="image/png, image/jpeg, image/jpg" style="display: none;">
+                <label for="upload-input" class="btn btn-primary" style="margin-top: 1rem;">
+                    Upload Image
+                </label>
+                <p class="mt-2 text-secondary">Supported formats: PNG, JPG, JPEG</p>
+            </div>
+
+            <div id="compression-area" class="hidden mt-4">
+                <!-- Controls -->
+                <div class="card mb-4">
+                    <div class="grid"
+                        style="grid-template-columns: 1fr 1fr; gap: var(--spacing-md); margin-bottom: var(--spacing-md);">
+                        <div class="input-group" style="margin-bottom: 0;">
+                            <label for="format-select">Output Format</label>
+                            <select id="format-select"
+                                style="width: 100%; padding: var(--spacing-sm); border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-primary); color: var(--text-primary);">
+                                <option value="image/jpeg">JPEG (Lossy, Smallest)</option>
+                                <option value="image/png">PNG (Lossless, Larger)</option>
+                                <option value="image/webp">WebP (Modern, Small)</option>
+                            </select>
+                        </div>
+                        <div class="input-group" style="margin-bottom: 0;">
+                            <label for="quality" style="display: flex; justify-content: space-between;">
+                                Compression Quality <span id="quality-val">80%</span>
+                            </label>
+                            <input type="range" id="quality" min="1" max="100" value="80" style="margin-top: 10px;">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Previews -->
+                <div class="grid" style="grid-template-columns: 1fr 1fr; gap: var(--spacing-md);">
+                    <!-- Original -->
+                    <div class="card">
+                        <h4 class="card-title text-center">Original</h4>
+                        <div
+                            style="height: 300px; display: flex; align-items: center; justify-content: center; background: var(--bg-secondary); border-radius: var(--radius-md); overflow: hidden;">
+                            <img id="original-preview" src="" alt="Original"
+                                style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                        </div>
+                        <p class="text-center mt-2" id="original-info">- KB</p>
+                    </div>
+
+                    <!-- Compressed -->
+                    <div class="card">
+                        <h4 class="card-title text-center">Compressed</h4>
+                        <div
+                            style="height: 300px; display: flex; align-items: center; justify-content: center; background: var(--bg-secondary); border-radius: var(--radius-md); overflow: hidden;">
+                            <img id="compressed-preview" src="" alt="Compressed"
+                                style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                        </div>
+                        <p class="text-center mt-2" id="compressed-info">- KB</p>
+                        <div class="text-center mt-2">
+                            <span id="savings-info" style="color: var(--success); font-weight: bold;"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-4">
+                    <a id="download-btn" class="btn btn-primary" download="compressed-image.jpg">Download Compressed
+                        Image</a>
+                </div>
+            </div>
+        </div>
+        <div class="ad-container ad-content">📢 Google AdSense Ad Space</div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 DevToolBox. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/theme.js"></script>
+    <script src="../js/tools/image-compressor.js"></script>
+</body>
+
+</html>

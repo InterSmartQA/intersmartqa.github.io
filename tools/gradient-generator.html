@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Gradient Generator - Free Tool | DevToolBox</title>
+    <meta name="description"
+        content="Create beautiful CSS gradients with live preview. Free gradient generator with presets and copy code functionality.">
+    <meta name="keywords" content="css gradient, gradient generator, linear gradient, css tool, gradient maker">
+
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧰</text></svg>">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .gradient-preview {
+            width: 100%;
+            height: 300px;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-color);
+            margin-bottom: var(--spacing-md);
+            transition: all var(--transition-base);
+        }
+
+        .presets-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: var(--spacing-sm);
+            margin-top: var(--spacing-md);
+        }
+
+        .preset {
+            height: 80px;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            border: 2px solid var(--border-color);
+            transition: all var(--transition-fast);
+        }
+
+        .preset:hover {
+            transform: scale(1.05);
+            border-color: var(--accent-primary);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="nav container">
+            <a href="../index.html" class="logo">🧰 DevToolBox</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#tools">Tools</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+                <li><button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌙</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="tool-container section">
+
+        <div class="tool-header">
+            <h1>CSS Gradient Generator</h1>
+            <p style="color: var(--text-secondary); font-size: 1.1rem;">
+                Create beautiful CSS gradients with live preview
+            </p>
+        </div>
+
+        <div class="tool-interface">
+
+            <!-- Live Preview -->
+            <div class="input-group">
+                <label>Live Preview:</label>
+                <div id="gradient-preview" class="gradient-preview"></div>
+            </div>
+
+            <!-- Color Controls -->
+            <div
+                style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-md); margin-bottom: var(--spacing-md);">
+                <div class="input-group">
+                    <label for="color1">Color 1:</label>
+                    <input type="color" id="color1" value="#6366f1" style="width: 100%; height: 50px; cursor: pointer;">
+                </div>
+                <div class="input-group">
+                    <label for="color2">Color 2:</label>
+                    <input type="color" id="color2" value="#8b5cf6" style="width: 100%; height: 50px; cursor: pointer;">
+                </div>
+            </div>
+
+            <!-- Angle Slider -->
+            <div class="input-group">
+                <label for="angle">Angle: <span id="angle-value">135°</span></label>
+                <input type="range" id="angle" min="0" max="360" value="135" style="width: 100%;">
+            </div>
+
+            <!-- CSS Output -->
+            <div class="input-group">
+                <label for="css-output">CSS Code:</label>
+                <pre id="css-output" class="output-area" style="min-height: 60px;"></pre>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="btn-group">
+                <button id="btn-copy" class="btn btn-primary">📋 Copy CSS</button>
+                <button id="btn-random" class="btn btn-secondary">🎲 Random Gradient</button>
+            </div>
+
+            <!-- Preset Gradients -->
+            <div class="input-group">
+                <label>Preset Gradients:</label>
+                <div class="presets-grid">
+                    <div class="preset" data-colors="#667eea,#764ba2" data-angle="135"
+                        style="background: linear-gradient(135deg, #667eea, #764ba2);"></div>
+                    <div class="preset" data-colors="#f093fb,#f5576c" data-angle="135"
+                        style="background: linear-gradient(135deg, #f093fb, #f5576c);"></div>
+                    <div class="preset" data-colors="#4facfe,#00f2fe" data-angle="135"
+                        style="background: linear-gradient(135deg, #4facfe, #00f2fe);"></div>
+                    <div class="preset" data-colors="#43e97b,#38f9d7" data-angle="135"
+                        style="background: linear-gradient(135deg, #43e97b, #38f9d7);"></div>
+                    <div class="preset" data-colors="#fa709a,#fee140" data-angle="135"
+                        style="background: linear-gradient(135deg, #fa709a, #fee140);"></div>
+                    <div class="preset" data-colors="#30cfd0,#330867" data-angle="135"
+                        style="background: linear-gradient(135deg, #30cfd0, #330867);"></div>
+                    <div class="preset" data-colors="#a8edea,#fed6e3" data-angle="135"
+                        style="background: linear-gradient(135deg, #a8edea, #fed6e3);"></div>
+                    <div class="preset" data-colors="#ff9a9e,#fecfef" data-angle="135"
+                        style="background: linear-gradient(135deg, #ff9a9e, #fecfef);"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="ad-container ad-content">
+            📢 Google AdSense Ad Space (336x280 or 300x250)
+        </div>
+
+        <div class="section-sm">
+            <h2>CSS Gradients Explained</h2>
+            <p>
+                CSS gradients allow you to create smooth transitions between two or more colors. Linear gradients
+                transition colors along a straight line, while radial gradients radiate from a center point.
+                Gradients are commonly used for backgrounds, buttons, and modern UI designs.
+            </p>
+
+            <h3 class="mt-3">Types of CSS Gradients</h3>
+            <ul style="color: var(--text-secondary); line-height: 1.8;">
+                <li><strong>Linear Gradient:</strong> Colors transition along a straight line at a specified angle</li>
+                <li><strong>Radial Gradient:</strong> Colors radiate from a center point outward</li>
+                <li><strong>Conic Gradient:</strong> Colors rotate around a center point</li>
+            </ul>
+
+            <h3 class="mt-3">Best Practices</h3>
+            <ul style="color: var(--text-secondary); line-height: 1.8;">
+                <li>Use gradients sparingly for maximum impact</li>
+                <li>Ensure text remains readable on gradient backgrounds</li>
+                <li>Consider accessibility and color contrast</li>
+                <li>Test gradients across different screen sizes</li>
+                <li>Provide fallback solid colors for older browsers</li>
+            </ul>
+        </div>
+
+        <div class="section-sm">
+            <h2>Frequently Asked Questions</h2>
+
+            <h4 class="mt-3">What browsers support CSS gradients?</h4>
+            <p>
+                All modern browsers support CSS gradients. For older browsers (IE9 and below), you may need to
+                provide a solid color fallback.
+            </p>
+
+            <h4 class="mt-3">Can I use more than two colors?</h4>
+            <p>
+                Yes! CSS gradients support multiple color stops. This tool focuses on two-color gradients for
+                simplicity, but you can manually add more colors to the CSS code.
+            </p>
+
+            <h4 class="mt-3">What's the difference between angle and direction?</h4>
+            <p>
+                Angle is specified in degrees (0-360°), where 0° is bottom to top, 90° is left to right, etc.
+                Direction uses keywords like "to right" or "to bottom right".
+            </p>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>DevToolBox</h4>
+                    <p style="color: var(--text-secondary); font-size: 0.875rem;">
+                        Free online tools for developers and designers.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4>Tools</h4>
+                    <ul class="footer-links">
+                        <li><a href="json-formatter.html">JSON Formatter</a></li>
+                        <li><a href="html-formatter.html">HTML Formatter</a></li>
+                        <li><a href="css-minifier.html">CSS Minifier</a></li>
+                        <li><a href="password-generator.html">Password Generator</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="../about.html">About</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                        <li><a href="../privacy.html">Privacy Policy</a></li>
+                        <li><a href="../terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://github.com" target="_blank">GitHub</a></li>
+                        <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+                        <li><a href="../contact.html">Email Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 DevToolBox. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/theme.js"></script>
+    <script src="../js/tools/gradient-generator.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lorem Ipsum Generator - Free Tool | DevToolBox</title>
+    <meta name="description"
+        content="Free Lorem Ipsum generator. Generate placeholder text for your designs and mockups.">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧰</text></svg>">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="../index.html" class="logo">🧰 DevToolBox</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#tools">Tools</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+                <li><button id="theme-toggle" class="theme-toggle">🌙</button></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="tool-container section">
+        <div class="tool-header">
+            <h1>Lorem Ipsum Generator</h1>
+            <p style="color: var(--text-secondary); font-size: 1.1rem;">Generate placeholder text for your designs</p>
+        </div>
+        <div class="tool-interface">
+            <div class="input-group">
+                <label for="type">Type:</label>
+                <select id="type"
+                    style="width: 100%; padding: var(--spacing-sm); border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-primary); color: var(--text-primary); font-family: inherit;">
+                    <option value="paragraphs">Paragraphs</option>
+                    <option value="words">Words</option>
+                </select>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-md);">
+                <div class="input-group">
+                    <label for="paragraphs">Number of Paragraphs:</label>
+                    <input type="number" id="paragraphs" value="3" min="1" max="20">
+                </div>
+                <div class="input-group">
+                    <label for="words">Number of Words:</label>
+                    <input type="number" id="words" value="50" min="1" max="2000">
+                </div>
+            </div>
+            <div class="btn-group">
+                <button id="btn-generate" class="btn btn-primary">✨ Generate</button>
+                <button id="btn-copy" class="btn btn-secondary">📋 Copy</button>
+                <button id="btn-clear" class="btn btn-outline">🗑️ Clear</button>
+            </div>
+            <div class="input-group mt-3">
+                <label>Output:</label>
+                <pre id="lorem-output" class="output-area" style="white-space: pre-wrap;"></pre>
+            </div>
+        </div>
+        <div class="ad-container ad-content">📢 Google AdSense Ad Space</div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 DevToolBox. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/theme.js"></script>
+    <script src="../js/tools/lorem-ipsum.js?v=3"></script>
+</body>
+
+</html>

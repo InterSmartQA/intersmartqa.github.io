@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>JSON Formatter & Validator Online - Free Tool | DevToolBox</title>
+    <meta name="description"
+        content="Free online JSON formatter and validator. Format, beautify, minify, and validate JSON data instantly. No signup required.">
+    <meta name="keywords"
+        content="JSON formatter, JSON validator, JSON beautifier, JSON minifier, online JSON tool, format JSON">
+
+    <!-- Favicon -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧰</text></svg>">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="../index.html" class="logo">
+                🧰 DevToolBox
+            </a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#tools">Tools</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+                <li>
+                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                        🌙
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Tool Container -->
+    <div class="tool-container section">
+
+        <!-- Tool Header -->
+        <div class="tool-header">
+            <h1>JSON Formatter & Validator</h1>
+            <p style="color: var(--text-secondary); font-size: 1.1rem;">
+                Format, beautify, minify, and validate your JSON data instantly
+            </p>
+        </div>
+
+        <!-- Tool Interface -->
+        <div class="tool-interface">
+
+            <!-- Input Area -->
+            <div class="input-group">
+                <label for="json-input">Input JSON:</label>
+                <textarea id="json-input" placeholder='Paste your JSON here, e.g., {"name": "value"}'
+                    style="min-height: 250px;"></textarea>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="btn-group">
+                <button id="btn-format" class="btn btn-primary">✨ Format</button>
+                <button id="btn-minify" class="btn btn-primary">📦 Minify</button>
+                <button id="btn-validate" class="btn btn-secondary">✓ Validate</button>
+                <button id="btn-copy" class="btn btn-secondary">📋 Copy</button>
+                <button id="btn-clear" class="btn btn-outline">🗑️ Clear</button>
+                <button id="btn-example" class="btn btn-outline">📝 Example</button>
+            </div>
+
+            <!-- Messages -->
+            <div id="error-message" class="error-message hidden"></div>
+            <div id="success-message" class="success-message hidden"></div>
+
+            <!-- Output Area -->
+            <div class="input-group mt-3">
+                <label for="json-output">Output:</label>
+                <pre id="json-output" class="output-area"></pre>
+            </div>
+
+        </div>
+
+        <!-- AdSense Ad -->
+        <div class="ad-container ad-content">
+            📢 Google AdSense Ad Space (336x280 or 300x250)
+        </div>
+
+        <!-- SEO Content -->
+        <div class="section-sm">
+            <h2>What is JSON Formatting?</h2>
+            <p>
+                JSON (JavaScript Object Notation) is a lightweight data-interchange format that's easy for humans to
+                read
+                and write, and easy for machines to parse and generate. Our JSON formatter helps you beautify minified
+                JSON data by adding proper indentation and line breaks, making it much easier to read and debug.
+            </p>
+
+            <h3 class="mt-3">Why Use a JSON Validator?</h3>
+            <p>
+                JSON validation ensures your data structure is correct and follows proper syntax rules. Invalid JSON can
+                cause errors in your applications, APIs, and data processing workflows. Our validator instantly checks
+                your JSON and provides clear error messages if issues are found.
+            </p>
+
+            <h3 class="mt-3">Features</h3>
+            <ul style="color: var(--text-secondary); line-height: 1.8;">
+                <li><strong>Format:</strong> Beautify JSON with proper indentation (2 spaces)</li>
+                <li><strong>Minify:</strong> Remove whitespace to reduce file size</li>
+                <li><strong>Validate:</strong> Check JSON syntax and structure</li>
+                <li><strong>Copy:</strong> One-click copy to clipboard</li>
+                <li><strong>Privacy:</strong> All processing happens in your browser</li>
+            </ul>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="section-sm">
+            <h2>Frequently Asked Questions</h2>
+
+            <h4 class="mt-3">Is my JSON data secure?</h4>
+            <p>
+                Yes! All JSON formatting and validation happens entirely in your browser. Your data never leaves your
+                device and is not sent to any server.
+            </p>
+
+            <h4 class="mt-3">What's the difference between formatting and minifying?</h4>
+            <p>
+                Formatting adds indentation and line breaks to make JSON human-readable. Minifying removes all
+                unnecessary whitespace to reduce file size, which is useful for production environments.
+            </p>
+
+            <h4 class="mt-3">Can I use this for large JSON files?</h4>
+            <p>
+                Yes, our tool can handle large JSON files. However, very large files (several MB) may take a moment
+                to process depending on your device's performance.
+            </p>
+
+            <h4 class="mt-3">Is this tool free?</h4>
+            <p>
+                Absolutely! DevToolBox is completely free with no hidden costs, registration requirements, or usage
+                limits.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>DevToolBox</h4>
+                    <p style="color: var(--text-secondary); font-size: 0.875rem;">
+                        Free online tools for developers and designers.
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Tools</h4>
+                    <ul class="footer-links">
+                        <li><a href="json-formatter.html">JSON Formatter</a></li>
+                        <li><a href="html-formatter.html">HTML Formatter</a></li>
+                        <li><a href="css-minifier.html">CSS Minifier</a></li>
+                        <li><a href="password-generator.html">Password Generator</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="../about.html">About</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                        <li><a href="../privacy.html">Privacy Policy</a></li>
+                        <li><a href="../terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://github.com" target="_blank">GitHub</a></li>
+                        <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+                        <li><a href="../contact.html">Email Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 DevToolBox. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/theme.js"></script>
+    <script src="../js/tools/json-formatter.js"></script>
+</body>
+
+</html>

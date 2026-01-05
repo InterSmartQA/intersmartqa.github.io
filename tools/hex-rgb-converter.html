@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEX to RGB Converter - Free Tool | DevToolBox</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧰</text></svg>">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="../index.html" class="logo">🧰 DevToolBox</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#tools">Tools</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+                <li><button id="theme-toggle" class="theme-toggle">🌙</button></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="tool-container section">
+        <div class="tool-header">
+            <h1>HEX to RGB Converter</h1>
+            <p style="color: var(--text-secondary);">Convert colors between formats</p>
+        </div>
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-xl);">
+            <!-- HEX to RGB -->
+            <div class="card" style="cursor: default;">
+                <h3 class="card-title text-center mb-3">HEX to RGB</h3>
+                <div class="input-group">
+                    <label for="hex-input">HEX Color Code</label>
+                    <input type="text" id="hex-input" placeholder="#000000" maxlength="7">
+                </div>
+
+                <div class="input-group">
+                    <label>RGB Result</label>
+                    <div class="output-area" id="rgb-result"
+                        style="min-height: auto; padding: 1rem; display: flex; align-items: center; justify-content: space-between;">
+                        <span>rgb(0, 0, 0)</span>
+                        <button class="btn btn-sm btn-outline" id="copy-rgb"
+                            style="padding: 0.25rem 0.5rem; font-size: 0.75rem;">Copy</button>
+                    </div>
+                </div>
+
+                <div id="hex-preview"
+                    style="height: 50px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background-color: #000000; margin-top: 1rem;">
+                </div>
+            </div>
+
+            <!-- RGB to HEX -->
+            <div class="card" style="cursor: default;">
+                <h3 class="card-title text-center mb-3">RGB to HEX</h3>
+                <div class="grid" style="grid-template-columns: 1fr 1fr 1fr; gap: 10px;">
+                    <div class="input-group">
+                        <label for="r-input">R</label>
+                        <input type="number" id="r-input" min="0" max="255" value="0">
+                    </div>
+                    <div class="input-group">
+                        <label for="g-input">G</label>
+                        <input type="number" id="g-input" min="0" max="255" value="0">
+                    </div>
+                    <div class="input-group">
+                        <label for="b-input">B</label>
+                        <input type="number" id="b-input" min="0" max="255" value="0">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>HEX Result</label>
+                    <div class="output-area" id="hex-result"
+                        style="min-height: auto; padding: 1rem; display: flex; align-items: center; justify-content: space-between;">
+                        <span>#000000</span>
+                        <button class="btn btn-sm btn-outline" id="copy-hex"
+                            style="padding: 0.25rem 0.5rem; font-size: 0.75rem;">Copy</button>
+                    </div>
+                </div>
+
+                <div id="rgb-preview"
+                    style="height: 50px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background-color: #000000; margin-top: 1rem;">
+                </div>
+            </div>
+        </div>
+
+        <div class="ad-container ad-content">📢 Google AdSense Ad Space</div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 DevToolBox. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/theme.js"></script>
+    <script src="../js/tools/hex-rgb-converter.js"></script>
+</body>
+
+</html>

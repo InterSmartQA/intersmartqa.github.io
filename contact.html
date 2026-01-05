@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us | DevToolBox</title>
+    <meta name="description"
+        content="Get in touch with DevToolBox. Send us your feedback, questions, or feature requests.">
+
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧰</text></svg>">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">🧰 DevToolBox</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#tools">Tools</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌙</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container section" style="max-width: 800px;">
+
+        <h1 class="text-center">Contact Us</h1>
+        <p class="text-center"
+            style="color: var(--text-secondary); font-size: 1.1rem; margin-bottom: var(--spacing-xl);">
+            We'd love to hear from you! Send us your feedback, questions, or feature requests.
+        </p>
+
+        <div class="tool-interface">
+
+            <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+
+                <div class="input-group">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name" required placeholder="Your name">
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                </div>
+
+                <div class="input-group">
+                    <label for="subject">Subject *</label>
+                    <input type="text" id="subject" name="subject" required placeholder="What is this about?">
+                </div>
+
+                <div class="input-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" required placeholder="Tell us what's on your mind..."
+                        style="min-height: 200px; font-family: inherit;"></textarea>
+                </div>
+
+                <div class="input-group">
+                    <label for="category">Category</label>
+                    <select id="category" name="category"
+                        style="width: 100%; padding: var(--spacing-sm); border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-primary); color: var(--text-primary); font-family: inherit;">
+                        <option value="general">General Inquiry</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="feature">Feature Request</option>
+                        <option value="bug">Bug Report</option>
+                        <option value="business">Business/Partnership</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%;">
+                    📧 Send Message
+                </button>
+
+            </form>
+
+            <div id="form-success" class="success-message hidden" style="margin-top: var(--spacing-md);">
+                ✓ Thank you! Your message has been sent successfully. We'll get back to you soon.
+            </div>
+
+        </div>
+
+        <div class="section-sm">
+            <h2 class="text-center">Other Ways to Reach Us</h2>
+
+            <div class="features-grid mt-3">
+
+                <div class="feature-item">
+                    <div class="feature-icon">📧</div>
+                    <h3 class="feature-title">Email</h3>
+                    <p class="feature-description">
+                        <a href="mailto:hello@devtoolbox.com">hello@devtoolbox.com</a>
+                    </p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">🐙</div>
+                    <h3 class="feature-title">GitHub</h3>
+                    <p class="feature-description">
+                        <a href="https://github.com/devtoolbox" target="_blank">@devtoolbox</a>
+                    </p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">🐦</div>
+                    <h3 class="feature-title">Twitter</h3>
+                    <p class="feature-description">
+                        <a href="https://twitter.com/devtoolbox" target="_blank">@devtoolbox</a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="section-sm"
+            style="background: var(--bg-secondary); padding: var(--spacing-lg); border-radius: var(--radius-lg);">
+            <h2>Frequently Asked Questions</h2>
+
+            <h4 class="mt-3">How quickly will you respond?</h4>
+            <p style="color: var(--text-secondary);">
+                We aim to respond to all inquiries within 24-48 hours during business days.
+            </p>
+
+            <h4 class="mt-3">Can I suggest a new tool?</h4>
+            <p style="color: var(--text-secondary);">
+                Absolutely! We love feature requests. Please use the "Feature Request" category when contacting us.
+            </p>
+
+            <h4 class="mt-3">How do I report a bug?</h4>
+            <p style="color: var(--text-secondary);">
+                Please select "Bug Report" as the category and provide as much detail as possible, including
+                your browser, operating system, and steps to reproduce the issue.
+            </p>
+
+            <h4 class="mt-3">Do you offer business partnerships?</h4>
+            <p style="color: var(--text-secondary);">
+                Yes! For business inquiries and partnerships, please select "Business/Partnership" and we'll
+                get back to you promptly.
+            </p>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>DevToolBox</h4>
+                    <p style="color: var(--text-secondary); font-size: 0.875rem;">
+                        Free online tools for developers and designers.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4>Tools</h4>
+                    <ul class="footer-links">
+                        <li><a href="tools/json-formatter.html">JSON Formatter</a></li>
+                        <li><a href="tools/html-formatter.html">HTML Formatter</a></li>
+                        <li><a href="tools/css-minifier.html">CSS Minifier</a></li>
+                        <li><a href="tools/password-generator.html">Password Generator</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://github.com" target="_blank">GitHub</a></li>
+                        <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+                        <li><a href="contact.html">Email Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 DevToolBox. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/theme.js"></script>
+    <script>
+        // Simple form success handling
+        const form = document.getElementById('contact-form');
+        const successMsg = document.getElementById('form-success');
+
+        form.addEventListener('submit', function (e) {
+            // Note: Replace the form action with your actual Formspree endpoint
+            // or another form handling service
+            setTimeout(() => {
+                successMsg.classList.remove('hidden');
+                form.reset();
+            }, 1000);
+        });
+    </script>
+</body>
+
+</html>
